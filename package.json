@@ -1,0 +1,26 @@
+{
+  "name": "smart-dialer-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Safety-gated progressive and predictive outbound dialer prototype",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && node dist/src/index.js",
+    "dev": "tsx watch src/index.ts",
+    "simulate": "npm run build && node dist/simulation/run_simulation.js",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
